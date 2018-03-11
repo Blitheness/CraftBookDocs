@@ -1,0 +1,561 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Integrated Circuits &#8212; CraftBook 4.0 documentation</title>
+    
+    <link rel="stylesheet" href="../../_static/theme.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600|Roboto:300,400italic,700italic,700,400" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '4.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="MC1000" href="MC1000.html" />
+    <link rel="prev" title="Water Place Only" href="../boat/waterplaceonly.html" /> 
+  </head>
+  <body role="document">
+<div class="header">
+  <div class="container">
+    <a href="http://forum.sk89q.com" class="btn btn-default navbar-btn navbar-right">Ask questions on our forums</a>
+    <a href="http://www.enginehub.org/" class="brand">EngineHub.org</a>
+    <div class="nav">
+      <li><a href="http://www.enginehub.org/">See our projects</a></li>
+      <li class="active"><a href="#">Docs</a></li>
+      <li><a href="http://forum.enginehub.org">Forums</a></li>
+    </div>
+  </div>
+</div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="MC1000.html" title="MC1000"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../boat/waterplaceonly.html" title="Water Place Only"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">CraftBook 4.0 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" accesskey="U">Mechanics Usage</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="integrated-circuits">
+<h1>Integrated Circuits<a class="headerlink" href="#integrated-circuits" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<div class="section" id="ics">
+<h2>ICs<a class="headerlink" href="#ics" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="10%" />
+<col width="8%" />
+<col width="22%" />
+<col width="47%" />
+<col width="4%" />
+<col width="9%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">IC ID</th>
+<th class="head">Shorthand</th>
+<th class="head">Name</th>
+<th class="head">Description</th>
+<th class="head">Family</th>
+<th class="head">Self Triggering</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference internal" href="MC1000.html"><span class="doc">MC1000</span></a></td>
+<td>REPEATER</td>
+<td>Repeater</td>
+<td>Repeats a redstone signal.</td>
+<td>SISO</td>
+<td>No</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="MC1001.html"><span class="doc">MC1001</span></a></td>
+<td>INVERTER</td>
+<td>Inverter</td>
+<td>Inverts a redstone signal.</td>
+<td>SISO</td>
+<td>No</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="MC1017.html"><span class="doc">MC1017</span></a></td>
+<td>RE T FLIP</td>
+<td>Toggle Flip Flop RE</td>
+<td>Toggles output on high.</td>
+<td>SISO</td>
+<td>No</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="MC1018.html"><span class="doc">MC1018</span></a></td>
+<td>FE T FLIP</td>
+<td>Toggle Flip Flip FE</td>
+<td>Toggles output on low.</td>
+<td>SISO</td>
+<td>No</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="MC1020.html"><span class="doc">MC1020</span></a></td>
+<td>RANDOM BIT</td>
+<td>Random Bit</td>
+<td>Randomly sets the output on high.</td>
+<td>SISO</td>
+<td>No</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="MC1025.html"><span class="doc">MC1025</span></a></td>
+<td>TIME MODULUS</td>
+<td>World Time Modulus</td>
+<td>Outputs high when the world time is odd.</td>
+<td>SISO</td>
+<td>No</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="MC1110.html"><span class="doc">MC1110</span></a></td>
+<td>TRANSMITTER</td>
+<td>Wireless Transmitter</td>
+<td>Transmits a wireless redstone signal.</td>
+<td>SISO</td>
+<td>No</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="MC1111.html"><span class="doc">MC1111</span></a></td>
+<td>RECEIVER</td>
+<td>Wireless Receiver</td>
+<td>Receives a wireless redstone signal.</td>
+<td>SISO</td>
+<td>Yes</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="MC1200.html"><span class="doc">MC1200</span></a></td>
+<td>SPAWNER</td>
+<td>Entity Spawner</td>
+<td>Spawns an entity with specified data.</td>
+<td>SISO</td>
+<td>No</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="MC1201.html"><span class="doc">MC1201</span></a></td>
+<td>DISPENSER</td>
+<td>Item Dispenser</td>
+<td>Spawns in items with specified data.</td>
+<td>SISO</td>
+<td>No</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="MC1203.html"><span class="doc">MC1203</span></a></td>
+<td>ZEUS BOLT</td>
+<td>Zeus Bolt</td>
+<td>Strikes a location with lightning.</td>
+<td>SISO</td>
+<td>No</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="MC1230.html"><span class="doc">MC1230</span></a></td>
+<td>SENSE DAY</td>
+<td>Daylight Sensor</td>
+<td>Outputs high if it is day.</td>
+<td>SISO</td>
+<td>Yes</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="MC1249.html"><span class="doc">MC1249</span></a></td>
+<td>BLOCK REPLACER</td>
+<td>Block Replacer</td>
+<td>Searches a nearby area and replaces blocks accordingly.</td>
+<td>SISO</td>
+<td>No</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="MC1253.html"><span class="doc">MC1253</span></a></td>
+<td>FIREWORK</td>
+<td>Programmable Firework Display</td>
+<td>Plays a firework show from a file.</td>
+<td>SISO</td>
+<td>No</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="MC1421.html"><span class="doc">MC1421</span></a></td>
+<td>CLOCK</td>
+<td>Clock</td>
+<td>Outputs high every X ticks when input is high.</td>
+<td>SISO</td>
+<td>Yes</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="MC2020.html"><span class="doc">MC2020</span></a></td>
+<td>RANDOM 3</td>
+<td>Random 3-Bit</td>
+<td>Randomly sets the outputs on high.</td>
+<td>SI3O</td>
+<td>No</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="MC2300.html"><span class="doc">MC2300</span></a></td>
+<td>ROM GET</td>
+<td>ROM Get</td>
+<td>Gets the memory state from a file for usage in the MemorySetter/Access IC group.</td>
+<td>SI3O</td>
+<td>No</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="MC3002.html"><span class="doc">MC3002</span></a></td>
+<td>AND</td>
+<td>And Gate</td>
+<td>Outputs high if all inputs are high.</td>
+<td>3ISO</td>
+<td>No</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="MC3003.html"><span class="doc">MC3003</span></a></td>
+<td>NAND</td>
+<td>Nand Gate</td>
+<td>Outputs high if all inputs are low.</td>
+<td>3ISO</td>
+<td>No</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="MC3020.html"><span class="doc">MC3020</span></a></td>
+<td>XOR</td>
+<td>Xor Gate</td>
+<td>Outputs high if the inputs are different</td>
+<td>3ISO</td>
+<td>No</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="MC3021.html"><span class="doc">MC3021</span></a></td>
+<td>XNOR</td>
+<td>Xnor Gate</td>
+<td>Outputs high if the inputs are the same</td>
+<td>3ISO</td>
+<td>No</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="MC3030.html"><span class="doc">MC3030</span></a></td>
+<td>RS-NOR</td>
+<td>RS-Nor Latch</td>
+<td>A compact RS-Nor Latch</td>
+<td>3ISO</td>
+<td>No</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="MC3031.html"><span class="doc">MC3031</span></a></td>
+<td>INV RS-NAND</td>
+<td>Inverse RS-Nand Latch</td>
+<td>A compact Inverse RS-Nand Latch</td>
+<td>3ISO</td>
+<td>No</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="MC3032.html"><span class="doc">MC3032</span></a></td>
+<td>JK FLIP</td>
+<td>JK Flip Flip</td>
+<td>A compact JK Flip Flop</td>
+<td>3ISO</td>
+<td>No</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="MC3033.html"><span class="doc">MC3033</span></a></td>
+<td>RS-NAND</td>
+<td>RS-Nand Latch</td>
+<td>A compact RS-Nand Latch</td>
+<td>3ISO</td>
+<td>No</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="MC3034.html"><span class="doc">MC3034</span></a></td>
+<td>EDGE-D</td>
+<td>Edge-Trigger D Flip Flop</td>
+<td>A compact Edge-D Flip Flop</td>
+<td>3ISO</td>
+<td>No</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="MC3036.html"><span class="doc">MC3036</span></a></td>
+<td>LEVEL-D</td>
+<td>Level-Trigger D Flip Flop</td>
+<td>A compact Level-D Flip Flop</td>
+<td>3ISO</td>
+<td>No</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="MC3050.html"><span class="doc">MC3050</span></a></td>
+<td>COMBO</td>
+<td>Combination Lock</td>
+<td>Outputs high if the correct combination is inputed</td>
+<td>3ISO</td>
+<td>No</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="MC3101.html"><span class="doc">MC3101</span></a></td>
+<td>DOWN COUNTER</td>
+<td>Down Counter</td>
+<td>Decrements on redstone signal, outputs high when reset.</td>
+<td>3ISO</td>
+<td>No</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="MC3102.html"><span class="doc">MC3102</span></a></td>
+<td>COUNTER</td>
+<td>Counter</td>
+<td>Increments on redstone signal, outputs high when reset.</td>
+<td>3ISO</td>
+<td>No</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="MC3231.html"><span class="doc">MC3231</span></a></td>
+<td>T CONTROL ADV</td>
+<td>Time Control Advanced</td>
+<td>Changes the time of day when the clock input goes from low to high.</td>
+<td>3ISO</td>
+<td>No</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="MC3300.html"><span class="doc">MC3300</span></a></td>
+<td>ROM SET</td>
+<td>ROM Set</td>
+<td>Sets the memory state for a file for usage in the MemorySetter/Access IC group.</td>
+<td>3ISO</td>
+<td>No</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="MC4000.html"><span class="doc">MC4000</span></a></td>
+<td>FULL ADDER</td>
+<td>Full Adder</td>
+<td>A compact full-adder</td>
+<td>3I3O</td>
+<td>No</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="MC4010.html"><span class="doc">MC4010</span></a></td>
+<td>HALF ADDER</td>
+<td>Half Adder</td>
+<td>A compact half-adder</td>
+<td>3I3O</td>
+<td>No</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="MC4100.html"><span class="doc">MC4100</span></a></td>
+<td>FULL SUBTR</td>
+<td>Full Subtractor</td>
+<td>A compact full-subtractor</td>
+<td>3I3O</td>
+<td>No</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="MC4110.html"><span class="doc">MC4110</span></a></td>
+<td>HALF SUBTR</td>
+<td>Half Subtractor</td>
+<td>A compact half-subtractor</td>
+<td>3I3O</td>
+<td>No</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="MC4200.html"><span class="doc">MC4200</span></a></td>
+<td>DISPATCH</td>
+<td>Dispatcher</td>
+<td>Outputs the centre input on the appropriate outputs when input is high.</td>
+<td>3I3O</td>
+<td>No</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="MC5000.html"><span class="doc">MC5000</span></a></td>
+<td>PERLSTONE</td>
+<td>Perlstone 3ISO Programmable Logic Chip</td>
+<td>3ISO PLC programmable with Perlstone.</td>
+<td>3ISO</td>
+<td>No</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="MC6020.html"><span class="doc">MC6020</span></a></td>
+<td>RANDOM 5</td>
+<td>Random 5-Bit</td>
+<td>Randomly sets the outputs on high.</td>
+<td>SI5O</td>
+<td>No</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="configuration">
+<h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="19%" />
+<col width="57%" />
+<col width="11%" />
+<col width="13%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Node</th>
+<th class="head">Comment</th>
+<th class="head">Type</th>
+<th class="head">Default</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>max-radius</td>
+<td>Maximum radius of IC mechanics.</td>
+<td>Double</td>
+<td>10.0</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+<div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+  <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none" role="search">
+  <form class="search" action="../../search.html" method="get">
+    <input type="text" name="q" />
+    <input type="submit" value="Go" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script><h3><a href="../../index.html">Table Of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../config.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../permissions.html">Permissions</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Mechanics Usage</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../ammeter.html">Ammeter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../better_physics.html">Better Physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../better_plants.html">Better Plants</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../block_bags.html">Block Bags</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../bookshelf.html">Bookshelf</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../bounce_blocks.html">Bounce Blocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../bridge.html">Bridge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chairs.html">Chairs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chunk_anchor.html">Chunk Anchor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../command_signs.html">Command Signs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cooking_pot.html">Cooking Pot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dispenser_recipes.html">Dispenser Recipes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../door.html">Door</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../elevator.html">Elevator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../footprints.html">Footprints</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gate.html">Gate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../glowstone.html">Glowstone</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../head_drops.html">Head Drops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hidden_switch.html">Hidden Switch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../jack_o_lantern.html">Jack O Lantern</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../jukebox.html">Redstone Jukebox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../light_switch.html">Light Switch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lightstone.html">LightStone</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../marquee.html">Marquee</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../netherrack.html">Netherrack</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../painting_switcher.html">Painting Switcher</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../pipes.html">Pipes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sign_copier.html">Sign Copier</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../snow.html">BetterSnow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../teleporter.html">Teleporter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../togglearea.html">ToggleArea</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tree_lopper.html">Tree Lopper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../variables.html">Variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../xp_storer.html">XP Storer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../boat/index.html">Boat Mechanics</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../boat/emptydecay.html">Empty Decay</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../boat/exitremover.html">Exit Remover</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../boat/landboats.html">Land Boats</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../boat/removeentities.html">Remove Entities</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../boat/speedmodifiers.html">Speed Modifiers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../boat/waterplaceonly.html">Water Place Only</a></li>
+</ul>
+</li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Integrated Circuits</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="MC1000.html">MC1000</a></li>
+<li class="toctree-l3"><a class="reference internal" href="MC1001.html">MC1001</a></li>
+<li class="toctree-l3"><a class="reference internal" href="MC1017.html">MC1017</a></li>
+<li class="toctree-l3"><a class="reference internal" href="MC1018.html">MC1018</a></li>
+<li class="toctree-l3"><a class="reference internal" href="MC1020.html">MC1020</a></li>
+<li class="toctree-l3"><a class="reference internal" href="MC1025.html">MC1025</a></li>
+<li class="toctree-l3"><a class="reference internal" href="MC1110.html">MC1110</a></li>
+<li class="toctree-l3"><a class="reference internal" href="MC1111.html">MC1111</a></li>
+<li class="toctree-l3"><a class="reference internal" href="MC1200.html">MC1200</a></li>
+<li class="toctree-l3"><a class="reference internal" href="MC1201.html">MC1201</a></li>
+<li class="toctree-l3"><a class="reference internal" href="MC1203.html">MC1203</a></li>
+<li class="toctree-l3"><a class="reference internal" href="MC1230.html">MC1230</a></li>
+<li class="toctree-l3"><a class="reference internal" href="MC1249.html">MC1249</a></li>
+<li class="toctree-l3"><a class="reference internal" href="MC1253.html">MC1253</a></li>
+<li class="toctree-l3"><a class="reference internal" href="MC1421.html">MC1421</a></li>
+<li class="toctree-l3"><a class="reference internal" href="MC2020.html">MC2020</a></li>
+<li class="toctree-l3"><a class="reference internal" href="MC2300.html">MC2300</a></li>
+<li class="toctree-l3"><a class="reference internal" href="MC3002.html">MC3002</a></li>
+<li class="toctree-l3"><a class="reference internal" href="MC3003.html">MC3003</a></li>
+<li class="toctree-l3"><a class="reference internal" href="MC3020.html">MC3020</a></li>
+<li class="toctree-l3"><a class="reference internal" href="MC3021.html">MC3021</a></li>
+<li class="toctree-l3"><a class="reference internal" href="MC3030.html">MC3030</a></li>
+<li class="toctree-l3"><a class="reference internal" href="MC3031.html">MC3031</a></li>
+<li class="toctree-l3"><a class="reference internal" href="MC3032.html">MC3032</a></li>
+<li class="toctree-l3"><a class="reference internal" href="MC3033.html">MC3033</a></li>
+<li class="toctree-l3"><a class="reference internal" href="MC3034.html">MC3034</a></li>
+<li class="toctree-l3"><a class="reference internal" href="MC3036.html">MC3036</a></li>
+<li class="toctree-l3"><a class="reference internal" href="MC3050.html">MC3050</a></li>
+<li class="toctree-l3"><a class="reference internal" href="MC3101.html">MC3101</a></li>
+<li class="toctree-l3"><a class="reference internal" href="MC3102.html">MC3102</a></li>
+<li class="toctree-l3"><a class="reference internal" href="MC3231.html">MC3231</a></li>
+<li class="toctree-l3"><a class="reference internal" href="MC3300.html">MC3300</a></li>
+<li class="toctree-l3"><a class="reference internal" href="MC4000.html">MC4000</a></li>
+<li class="toctree-l3"><a class="reference internal" href="MC4010.html">MC4010</a></li>
+<li class="toctree-l3"><a class="reference internal" href="MC4100.html">MC4100</a></li>
+<li class="toctree-l3"><a class="reference internal" href="MC4110.html">MC4110</a></li>
+<li class="toctree-l3"><a class="reference internal" href="MC4200.html">MC4200</a></li>
+<li class="toctree-l3"><a class="reference internal" href="MC5000.html">MC5000</a></li>
+<li class="toctree-l3"><a class="reference internal" href="MC6020.html">MC6020</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../minecart/index.html">Minecart Mechanics</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../minecart/emptydecay.html">Empty Decay</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../minecart/exitremover.html">Exit Remover</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../minecart/item_pickup.html">Item Pickup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../minecart/mob_blocker.html">Mob Blocker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../minecart/more_rails.html">More Rails</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../minecart/no_collide.html">No Collide</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../minecart/remove_entities.html">Remove Entities</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../minecart/block/index.html">Minecart Block Mechanics</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../minecart/block/ejector.html">Ejector</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../minecart/block/messenger.html">Messenger</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../minecart/block/reverser.html">Reverser</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../faq.html">Common Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../support.html">Getting Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../source-code.html">Source Code</a></li>
+</ul>
+
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../_sources/mechanics/ics/index.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+  </div>
+
+  <div class="sponsorbox">
+  </div>
+</div>
+
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="MC1000.html" title="MC1000"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../boat/waterplaceonly.html" title="Water Place Only"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">CraftBook 4.0 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >Mechanics Usage</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2016, CraftBook Team.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.6.
+    </div>
+  </body>
+</html>

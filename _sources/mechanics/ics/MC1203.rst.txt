@@ -1,0 +1,48 @@
+======
+MC1203
+======
+
+.. note::
+
+   This IC is marked as `Restricted`. This means it's not necessarily suitable for normal players.
+
+
+**MC1203** is an IC that generates a lighting bolt on the block behind the IC sign (or the block at the offset if offset is set) when the input (the
+"clock") goes from low to high.
+
+
+Sign Lines
+==========
+
+1. ZEUS BOLT
+2. [MC1203]
+3. radius=x,z,y
+4. Optional chance (Out of 100)
+
+
+IC Pins
+=======
+
+
+Inputs
+------
+
+- Strike lightning on high
+
+Outputs
+-------
+
+- None
+
+
+Permissions
+===========
+
+============================== ============================================= ============
+Node                           Description                                   Default Role 
+============================== ============================================= ============
+craftbook.ic.restricted.mc1203 Allows creation of the Zeus Bolt (MC1203) IC. staff        
+============================== ============================================= ============
+
+
+

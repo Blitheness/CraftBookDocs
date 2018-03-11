@@ -1,0 +1,50 @@
+======
+MC1110
+======
+
+**MC1110** allows transmitting redstone signal over long distances. The equivalent IC to receive the signals is `MC1111 <MC1111.html>`_
+
+How-To
+======
+
+Once this IC is setup, create a `Receiver <MC1111.html>`_ with the same `narrowband` and `wideband`.
+
+.. image:: /images/ics/mc1110/transmitter.png
+   :align: center
+
+
+Sign Lines
+==========
+
+1. TRANSMITTER
+2. [MC1110]
+3. The channel name (narrowband)
+4. Optional wideband. Defaults to UUID if blank
+
+
+IC Pins
+=======
+
+
+Inputs
+------
+
+- Wireless Input
+
+Outputs
+-------
+
+- None
+
+
+Permissions
+===========
+
+======================== ======================================================== ============
+Node                     Description                                              Default Role 
+======================== ======================================================== ============
+craftbook.ic.safe.mc1110 Allows creation of the Wireless Transmitter (MC1110) IC. user         
+======================== ======================================================== ============
+
+
+

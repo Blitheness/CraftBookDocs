@@ -1,0 +1,44 @@
+======
+MC1017
+======
+
+**MC1017** is a toggle flip flop that toggles its output state between low and high whenever the input (the "clock") changes from low to high.
+
+Equivalent Perlstone script: ``Lp1AdSp1.0100[Lp0!dSp0r]Lp0r``
+
+
+Sign Lines
+==========
+
+1. RE T FLIP
+2. [MC1017]
+3. Blank
+4. Blank
+
+
+IC Pins
+=======
+
+
+Inputs
+------
+
+- Toggle output on high
+
+Outputs
+-------
+
+- Output
+
+
+Permissions
+===========
+
+======================== ======================================================= ============
+Node                     Description                                             Default Role 
+======================== ======================================================= ============
+craftbook.ic.safe.mc1017 Allows creation of the Toggle Flip Flop RE (MC1017) IC. user         
+======================== ======================================================= ============
+
+
+

@@ -1,0 +1,42 @@
+======
+MC1020
+======
+
+The **MC1020** generates a random state whenever the input (the "clock") goes from low to high.
+
+
+Sign Lines
+==========
+
+1. RANDOM BIT
+2. [MC1020]
+3. Min On:Max On
+4. Blank
+
+
+IC Pins
+=======
+
+
+Inputs
+------
+
+- High to output random state
+
+Outputs
+-------
+
+- Outputs random state
+
+
+Permissions
+===========
+
+======================== ============================================== ============
+Node                     Description                                    Default Role 
+======================== ============================================== ============
+craftbook.ic.safe.mc1020 Allows creation of the Random Bit (MC1020) IC. user         
+======================== ============================================== ============
+
+
+

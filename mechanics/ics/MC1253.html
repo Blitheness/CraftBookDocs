@@ -1,0 +1,458 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>MC1253 &#8212; CraftBook 4.0 documentation</title>
+    
+    <link rel="stylesheet" href="../../_static/theme.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600|Roboto:300,400italic,700italic,700,400" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '4.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="MC1421" href="MC1421.html" />
+    <link rel="prev" title="MC1249" href="MC1249.html" /> 
+  </head>
+  <body role="document">
+<div class="header">
+  <div class="container">
+    <a href="http://forum.sk89q.com" class="btn btn-default navbar-btn navbar-right">Ask questions on our forums</a>
+    <a href="http://www.enginehub.org/" class="brand">EngineHub.org</a>
+    <div class="nav">
+      <li><a href="http://www.enginehub.org/">See our projects</a></li>
+      <li class="active"><a href="#">Docs</a></li>
+      <li><a href="http://forum.enginehub.org">Forums</a></li>
+    </div>
+  </div>
+</div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="MC1421.html" title="MC1421"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="MC1249.html" title="MC1249"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">CraftBook 4.0 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >Mechanics Usage</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="index.html" accesskey="U">Integrated Circuits</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="mc1253">
+<h1>MC1253<a class="headerlink" href="#mc1253" title="Permalink to this headline">¶</a></h1>
+<p><strong>MC1253</strong> is an IC that can play a firework show using 2 available scripting languages implemented into CraftBook.
+Scripts go inside the /config/craftbook/fireworks folder, and come in either .txt or .fwk file formats.</p>
+<div class="section" id="firework-languages">
+<h2>Firework Languages<a class="headerlink" href="#firework-languages" title="Permalink to this headline">¶</a></h2>
+<p>There are two firework languages in CraftBook. A simple one called Basic, which is good for quick single firework scripts. Or Fyrestone, which is a bit more involved, but ultimately better for larger scripts.</p>
+<div class="section" id="basic">
+<h3>Basic<a class="headerlink" href="#basic" title="Permalink to this headline">¶</a></h3>
+<p>Basic files end with the .txt filetype.
+The syntax of &#8216;Basic&#8217; is the following,</p>
+<p>launch:xOff,yOff,zOff;duration;shape;r,g,b colour;r,g,b fade;effect</p>
+<p>The xOff, yOff, and zOff parameters refer to the offset that the firework will be launched from.</p>
+<p>The duration refers to the duration of the flight, in seconds.</p>
+<p>The shape refers to the &#8216;type&#8217; of the firework. The shape can be any from <a class="reference external" href="https://jd.spongepowered.org/org/spongepowered/api/item/FireworkShapes.html">this list</a>, or any provided by another mod.</p>
+<p>The r,g,b colour, and r,g,b fade, are the base colours and fade colours respectively.</p>
+<p>The effect is an optional parameter that can currently be either trail or twinkle, to apply those effects to the firework.</p>
+<div class="section" id="example">
+<h4>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-none"><div class="highlight"><pre><span></span>launch:0,2,0;1;burst;255,0,0;0,0,255;twinkle
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="fyrestone">
+<h3>Fyrestone<a class="headerlink" href="#fyrestone" title="Permalink to this headline">¶</a></h3>
+<p>Fyrestone files are .fwk files.</p>
+<p>Fyrestone follows the lines of some very basic languages. It supports multiple effects per firework, and each firework can be launched multiple times.</p>
+<p>The language is effect based, where you can add effects to a defined variable.</p>
+<p>It is done like this:</p>
+<p>To define a variable, or to add to a variable... Type:</p>
+<p>start &lt;variableName&gt;</p>
+<p>After that, you enter all the effects you want in this format:</p>
+<div class="highlight-guess"><div class="highlight"><pre><span></span>set.color 255,0,0
+set.fade 255,0,0
+set.shape burst
+set.trail
+set.twinkle
+</pre></div>
+</div>
+<p>You do not need to include all of these, you can select whichever ones you want. However shape is required.</p>
+<p>And to end off the construction, you type build &lt;variableName&gt;, signifying that effect is done. To add a second effect to the variable repeat the process.</p>
+<p>Durations are not bound to variables, they are set seperately. To set a duration, type: duration &lt;duration in seconds&gt;
+The duration will be applied until it is changed again.</p>
+<p>Locations are done the same way, location x,y,z</p>
+<p>You can also wait a certain number of ticks using... wait &lt;ticks&gt;</p>
+<p>You can have spaces between the lines to make it neater, and start lines with a # to make it a comment.</p>
+<div class="section" id="commands">
+<h4>Commands<a class="headerlink" href="#commands" title="Permalink to this headline">¶</a></h4>
+<table border="1" class="docutils">
+<colgroup>
+<col width="4%" />
+<col width="27%" />
+<col width="60%" />
+<col width="9%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>Command</td>
+<td>Parameters</td>
+<td>Description</td>
+<td>Example</td>
+</tr>
+<tr class="row-even"><td>start</td>
+<td>Name&lt;string&gt;</td>
+<td>Starts building a new firework, the first parameter is the name.</td>
+<td>start MyFirework</td>
+</tr>
+<tr class="row-odd"><td>build</td>
+<td>Name&lt;string&gt;</td>
+<td>Finishes building a new firework and stores it, the first parameter is the name.</td>
+<td>build MyFirework</td>
+</tr>
+<tr class="row-even"><td>set.color</td>
+<td>R&lt;integer&gt;,G&lt;integer&gt;,B&lt;integer&gt;</td>
+<td><p class="first">Sets the color of the firework.</p>
+<p class="last">Multiple can be set for random colours.</p>
+</td>
+<td>set.color 255,0,0</td>
+</tr>
+<tr class="row-odd"><td>set.fade</td>
+<td>R&lt;integer&gt;,G&lt;integer&gt;,B&lt;integer&gt;</td>
+<td><p class="first">Sets the color of the firework.set.trail: set.fade will set color for trail.</p>
+<p class="last">Multiple can be set for random colours.</p>
+</td>
+<td>set.fade 0,255,0</td>
+</tr>
+<tr class="row-even"><td>set.shape</td>
+<td>Shape&lt;string&gt;</td>
+<td>Sets the shape of the firework. The shape can be any from <a class="reference external" href="https://jd.spongepowered.org/org/spongepowered/api/item/FireworkShapes.html">this list</a>, or any provided by another mod.</td>
+<td>set.shape creeper</td>
+</tr>
+<tr class="row-odd"><td>set.twinkle</td>
+<td><cite>None</cite></td>
+<td>Enables twinkles on the firework.</td>
+<td>set.twinkle</td>
+</tr>
+<tr class="row-even"><td>set.trail</td>
+<td><cite>None</cite></td>
+<td>Enables trails on the firework.</td>
+<td>set.trail</td>
+</tr>
+<tr class="row-odd"><td>set.flicker</td>
+<td><cite>None</cite></td>
+<td>Enables flicker on the firework</td>
+<td>set.flicker</td>
+</tr>
+<tr class="row-even"><td>duration</td>
+<td>Time&lt;decimal&gt;</td>
+<td>Sets the time (in seconds) the firework takes to explode.</td>
+<td>duration 1.5</td>
+</tr>
+<tr class="row-odd"><td>location</td>
+<td>X&lt;decimal&gt;,Y&lt;decimal&gt;,Z&lt;decimal&gt;</td>
+<td>Sets the <strong>offset</strong> spawn point for the firework from the IC sign. <strong>This is not absolute coordinates, but an offset!</strong></td>
+<td>location 0,32,0</td>
+</tr>
+<tr class="row-even"><td>launch</td>
+<td>Name&lt;string&gt;</td>
+<td>Launches the specified firework.</td>
+<td>launch MyFirework</td>
+</tr>
+<tr class="row-odd"><td>wait</td>
+<td>Ticks&lt;integer&gt;</td>
+<td>Waits for a specified amount of ticks.</td>
+<td>wait 20</td>
+</tr>
+<tr class="row-even"><td>sound</td>
+<td>SoundName&lt;string&gt; X&lt;decimal&gt;,Y&lt;decimal&gt;,Z&lt;decimal&gt; Volume&lt;decimal&gt; Pitch&lt;decimal&gt;</td>
+<td>Plays a sound at an offset.</td>
+<td>sound FUSE 0,0,0 2.0 1.0</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id2">
+<h4>Example<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-none"><div class="highlight"><pre><span></span># Adding 2 effects to variable a
+
+start a
+set.color 255,255,255
+set.type creeper
+set.flicker
+set.fade 255,0,0
+build a
+
+start a
+set.color 0,255,0
+set.type lball
+set.trail
+set.fade 0,0,255
+build a
+
+# Launch a
+launch a
+
+# Launch a another 2 times in different locations
+location -1,2,3
+launch a
+location 4,-2,7
+launch a
+
+# Make another effect and launch it at the sign
+start b
+set.color 30,255,80
+set.type burst
+set.trail
+set.fade 255,0,0
+build b
+location 0,0,0
+launch b
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="sign-lines">
+<h2>Sign Lines<a class="headerlink" href="#sign-lines" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li>FIREWORK</li>
+<li>[MC1253]</li>
+<li>Firework Script Name</li>
+<li>Stop on Low (true/false)</li>
+</ol>
+</div>
+<div class="section" id="ic-pins">
+<h2>IC Pins<a class="headerlink" href="#ic-pins" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="inputs">
+<h3>Inputs<a class="headerlink" href="#inputs" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Runs script on high</li>
+</ul>
+</div>
+<div class="section" id="outputs">
+<h3>Outputs<a class="headerlink" href="#outputs" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>None</li>
+</ul>
+</div>
+</div>
+<div class="section" id="permissions">
+<h2>Permissions<a class="headerlink" href="#permissions" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="24%" />
+<col width="64%" />
+<col width="12%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Node</th>
+<th class="head">Description</th>
+<th class="head">Default Role</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>craftbook.ic.safe.mc1253</td>
+<td>Allows creation of the Programmable Firework Display (MC1253) IC.</td>
+<td>user</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+<div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+  <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none" role="search">
+  <form class="search" action="../../search.html" method="get">
+    <input type="text" name="q" />
+    <input type="submit" value="Go" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script><h3><a href="../../index.html">Table Of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../config.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../permissions.html">Permissions</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Mechanics Usage</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../ammeter.html">Ammeter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../better_physics.html">Better Physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../better_plants.html">Better Plants</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../block_bags.html">Block Bags</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../bookshelf.html">Bookshelf</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../bounce_blocks.html">Bounce Blocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../bridge.html">Bridge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chairs.html">Chairs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chunk_anchor.html">Chunk Anchor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../command_signs.html">Command Signs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cooking_pot.html">Cooking Pot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dispenser_recipes.html">Dispenser Recipes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../door.html">Door</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../elevator.html">Elevator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../footprints.html">Footprints</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gate.html">Gate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../glowstone.html">Glowstone</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../head_drops.html">Head Drops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hidden_switch.html">Hidden Switch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../jack_o_lantern.html">Jack O Lantern</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../jukebox.html">Redstone Jukebox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../light_switch.html">Light Switch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lightstone.html">LightStone</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../marquee.html">Marquee</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../netherrack.html">Netherrack</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../painting_switcher.html">Painting Switcher</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../pipes.html">Pipes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sign_copier.html">Sign Copier</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../snow.html">BetterSnow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../teleporter.html">Teleporter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../togglearea.html">ToggleArea</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tree_lopper.html">Tree Lopper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../variables.html">Variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../xp_storer.html">XP Storer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../boat/index.html">Boat Mechanics</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../boat/emptydecay.html">Empty Decay</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../boat/exitremover.html">Exit Remover</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../boat/landboats.html">Land Boats</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../boat/removeentities.html">Remove Entities</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../boat/speedmodifiers.html">Speed Modifiers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../boat/waterplaceonly.html">Water Place Only</a></li>
+</ul>
+</li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Integrated Circuits</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="MC1000.html">MC1000</a></li>
+<li class="toctree-l3"><a class="reference internal" href="MC1001.html">MC1001</a></li>
+<li class="toctree-l3"><a class="reference internal" href="MC1017.html">MC1017</a></li>
+<li class="toctree-l3"><a class="reference internal" href="MC1018.html">MC1018</a></li>
+<li class="toctree-l3"><a class="reference internal" href="MC1020.html">MC1020</a></li>
+<li class="toctree-l3"><a class="reference internal" href="MC1025.html">MC1025</a></li>
+<li class="toctree-l3"><a class="reference internal" href="MC1110.html">MC1110</a></li>
+<li class="toctree-l3"><a class="reference internal" href="MC1111.html">MC1111</a></li>
+<li class="toctree-l3"><a class="reference internal" href="MC1200.html">MC1200</a></li>
+<li class="toctree-l3"><a class="reference internal" href="MC1201.html">MC1201</a></li>
+<li class="toctree-l3"><a class="reference internal" href="MC1203.html">MC1203</a></li>
+<li class="toctree-l3"><a class="reference internal" href="MC1230.html">MC1230</a></li>
+<li class="toctree-l3"><a class="reference internal" href="MC1249.html">MC1249</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">MC1253</a></li>
+<li class="toctree-l3"><a class="reference internal" href="MC1421.html">MC1421</a></li>
+<li class="toctree-l3"><a class="reference internal" href="MC2020.html">MC2020</a></li>
+<li class="toctree-l3"><a class="reference internal" href="MC2300.html">MC2300</a></li>
+<li class="toctree-l3"><a class="reference internal" href="MC3002.html">MC3002</a></li>
+<li class="toctree-l3"><a class="reference internal" href="MC3003.html">MC3003</a></li>
+<li class="toctree-l3"><a class="reference internal" href="MC3020.html">MC3020</a></li>
+<li class="toctree-l3"><a class="reference internal" href="MC3021.html">MC3021</a></li>
+<li class="toctree-l3"><a class="reference internal" href="MC3030.html">MC3030</a></li>
+<li class="toctree-l3"><a class="reference internal" href="MC3031.html">MC3031</a></li>
+<li class="toctree-l3"><a class="reference internal" href="MC3032.html">MC3032</a></li>
+<li class="toctree-l3"><a class="reference internal" href="MC3033.html">MC3033</a></li>
+<li class="toctree-l3"><a class="reference internal" href="MC3034.html">MC3034</a></li>
+<li class="toctree-l3"><a class="reference internal" href="MC3036.html">MC3036</a></li>
+<li class="toctree-l3"><a class="reference internal" href="MC3050.html">MC3050</a></li>
+<li class="toctree-l3"><a class="reference internal" href="MC3101.html">MC3101</a></li>
+<li class="toctree-l3"><a class="reference internal" href="MC3102.html">MC3102</a></li>
+<li class="toctree-l3"><a class="reference internal" href="MC3231.html">MC3231</a></li>
+<li class="toctree-l3"><a class="reference internal" href="MC3300.html">MC3300</a></li>
+<li class="toctree-l3"><a class="reference internal" href="MC4000.html">MC4000</a></li>
+<li class="toctree-l3"><a class="reference internal" href="MC4010.html">MC4010</a></li>
+<li class="toctree-l3"><a class="reference internal" href="MC4100.html">MC4100</a></li>
+<li class="toctree-l3"><a class="reference internal" href="MC4110.html">MC4110</a></li>
+<li class="toctree-l3"><a class="reference internal" href="MC4200.html">MC4200</a></li>
+<li class="toctree-l3"><a class="reference internal" href="MC5000.html">MC5000</a></li>
+<li class="toctree-l3"><a class="reference internal" href="MC6020.html">MC6020</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../minecart/index.html">Minecart Mechanics</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../minecart/emptydecay.html">Empty Decay</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../minecart/exitremover.html">Exit Remover</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../minecart/item_pickup.html">Item Pickup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../minecart/mob_blocker.html">Mob Blocker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../minecart/more_rails.html">More Rails</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../minecart/no_collide.html">No Collide</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../minecart/remove_entities.html">Remove Entities</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../minecart/block/index.html">Minecart Block Mechanics</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../minecart/block/ejector.html">Ejector</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../minecart/block/messenger.html">Messenger</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../minecart/block/reverser.html">Reverser</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../faq.html">Common Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../support.html">Getting Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../source-code.html">Source Code</a></li>
+</ul>
+
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../_sources/mechanics/ics/MC1253.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+  </div>
+
+  <div class="sponsorbox">
+  </div>
+</div>
+
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="MC1421.html" title="MC1421"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="MC1249.html" title="MC1249"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">CraftBook 4.0 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >Mechanics Usage</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="index.html" >Integrated Circuits</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2016, CraftBook Team.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.6.
+    </div>
+  </body>
+</html>
